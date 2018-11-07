@@ -94,17 +94,18 @@
 
 
 
-<meta name="description" content="HBLong&apos;s blog">
+<meta name="description" content="git下载下载地址 git配置12git config --global user.name &quot;你的GitHub用户名&quot;git config --global user.email &quot;你的GitHub注册邮箱&quot; 生成密钥12345ssh-keygen -t rsa -b 4096 -C &quot;你的GitHub注册邮箱&quot;Enter file in which to save the key">
 <meta name="keywords" content="HBLong,blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="HBLong&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git管理密钥配置">
+<meta property="og:url" content="http://yoursite.com/2018/11/03/git管理密钥配置/index.html">
 <meta property="og:site_name" content="HBLong&#39;s blog">
-<meta property="og:description" content="HBLong&apos;s blog">
+<meta property="og:description" content="git下载下载地址 git配置12git config --global user.name &quot;你的GitHub用户名&quot;git config --global user.email &quot;你的GitHub注册邮箱&quot; 生成密钥12345ssh-keygen -t rsa -b 4096 -C &quot;你的GitHub注册邮箱&quot;Enter file in which to save the key">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-11-07T13:58:42.175Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HBLong&#39;s blog">
-<meta name="twitter:description" content="HBLong&apos;s blog">
+<meta name="twitter:title" content="git管理密钥配置">
+<meta name="twitter:description" content="git下载下载地址 git配置12git config --global user.name &quot;你的GitHub用户名&quot;git config --global user.email &quot;你的GitHub注册邮箱&quot; 生成密钥12345ssh-keygen -t rsa -b 4096 -C &quot;你的GitHub注册邮箱&quot;Enter file in which to save the key">
 
 
 
@@ -133,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2018/11/03/git管理密钥配置/">
 
 
 
 
 
-  <title>HBLong's blog</title>
+  <title>git管理密钥配置 | HBLong's blog</title>
   
 
 
@@ -164,9 +165,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -259,147 +258,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/07/PHP-Redis-使用教程/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="HBLong">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="HBLong's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/07/PHP-Redis-使用教程/" itemprop="url">PHP Redis 使用教程</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-07T20:51:54+08:00">
-                2018-11-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="PHP-Redis使用教程"><a href="#PHP-Redis使用教程" class="headerlink" title="PHP Redis使用教程"></a>PHP Redis使用教程</h2><p>日常使用Redis的过程中发现搜到的文档对于使用方法、返回值这些都不是很全，因此写个文档整理在一起方便查找。除了比较难找的，后面会分配时间将常用的也不断补全。</p>
-<p><br></p>
-<h2 id="连接"><a href="#连接" class="headerlink" title="连接"></a>连接</h2><h3 id="connect"><a href="#connect" class="headerlink" title="connect"></a>connect</h3><p>使用方法：$redis-&gt;connect($host, $port)<br>返回值：被移除key的数量<br>参数：<strong>host</strong>服务地址；  <strong>port</strong>端口号</p>
-<p>用途：切换redis库<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$redis = <span class="keyword">new</span> Redis();</span><br><span class="line">$redis-&gt;connect(<span class="string">'127.0.0.1'</span>, <span class="number">6379</span>);</span><br></pre></td></tr></table></figure></p>
-<h3 id="select"><a href="#select" class="headerlink" title="select"></a>select</h3><p>使用方法：$redis-&gt;select($db_number)<br>返回值：被移除key的数量<br>参数：库对应的数值<br>用途：切换redis库<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$redis = <span class="keyword">new</span> Redis();</span><br><span class="line">$redis-&gt;connect(<span class="string">'127.0.0.1'</span>, <span class="number">6379</span>);</span><br><span class="line">$redis-&gt;select(<span class="number">1</span>); <span class="comment">// 切换到1库</span></span><br></pre></td></tr></table></figure></p>
-<p><br></p>
-<h2 id="键（KEY）"><a href="#键（KEY）" class="headerlink" title="键（KEY）"></a>键（KEY）</h2><h3 id="del"><a href="#del" class="headerlink" title="del"></a>del</h3><p>使用方法：$redis-&gt;del($key)<br>返回值：被移除key的数量<br>参数：可以是单个键或者键数组<br>用途：删除指定键（单个或者多个）</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="comment">// 单个删除</span></span><br><span class="line">$key = <span class="string">'test'</span>;</span><br><span class="line">$redis-&gt;del($key); <span class="comment">// 返回1，键不存在则返回0</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 批量删除</span></span><br><span class="line">$key_array = [ <span class="string">'test1'</span>, <span class="string">'test2'</span>, <span class="string">'test3'</span> ];</span><br><span class="line">$result = $redis-&gt;del($key_array); <span class="comment">// 返回3</span></span><br></pre></td></tr></table></figure>
-<h3 id="set"><a href="#set" class="headerlink" title="set"></a>set</h3><p>使用方法：$redis-&gt;set($key, $value)<br>返回值：true | false<br>用途：设置键对应的值</p>
-<h3 id="get"><a href="#get" class="headerlink" title="get"></a>get</h3><p>使用方法：$redis-&gt;get($key)<br>返回值：键对应的值<br>用途：获取键对应的值</p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line">$key = <span class="string">'name'</span>;</span><br><span class="line">$redis-&gt;set($key, <span class="string">'xiaoming'</span>);</span><br><span class="line">$redis-&gt;get($key); <span class="comment">// 返回 xiaoming</span></span><br></pre></td></tr></table></figure>
-<h3 id="exists"><a href="#exists" class="headerlink" title="exists"></a>exists</h3><p>使用方法：$redis-&gt;exists($key)<br>返回值：true | false<br>用途：判断键是否存在</p>
-<h3 id="setex"><a href="#setex" class="headerlink" title="setex"></a>setex</h3><p>使用方法：$redis-&gt;setex(‘key’, 3600, ‘value’);<br>用途：设置一小时超时时间</p>
-<h3 id="setnx"><a href="#setnx" class="headerlink" title="setnx"></a>setnx</h3><p>使用方法：$redis-&gt;setnx(‘key’, ‘value’);<br>用途：将key的值设为value，当且仅当key不存在。 若给定的key已经存在，则SETNX不做任何动作。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$result = $redis-&gt;setnx(&apos;key&apos;, &apos;value&apos;);</span><br><span class="line">var_dump($result);  // 首次设置键，返回true</span><br><span class="line">$result = $redis-&gt;setnx(&apos;key&apos;, &apos;value1&apos;);</span><br><span class="line">var_dump($result);  // 库内已存在键，返回false</span><br><span class="line">$result = $redis-&gt;get(&apos;key&apos;);</span><br><span class="line">var_dump($result);  // 返回 value</span><br></pre></td></tr></table></figure></p>
-<p><br></p>
-<h2 id="Hash（哈希表）"><a href="#Hash（哈希表）" class="headerlink" title="Hash（哈希表）"></a>Hash（哈希表）</h2><h3 id="hmset"><a href="#hmset" class="headerlink" title="hmset"></a>hmset</h3><p>使用方法：$redis-&gt;hmset($key, $value_array);<br>返回值：true | false<br>用途：给哈希表批量赋值（键值对）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$value_array = [</span><br><span class="line">      &apos;key1&apos; =&gt; &apos;value1&apos;,</span><br><span class="line">      &apos;key2&apos; =&gt; &apos;value2&apos;,</span><br><span class="line">      &apos;key3&apos; =&gt; &apos;value3&apos;,</span><br><span class="line">];</span><br><span class="line">$redis-&gt;hmset($key, $value_array); // 设置成功，返回true</span><br></pre></td></tr></table></figure></p>
-<h3 id="hmget"><a href="#hmget" class="headerlink" title="hmget"></a>hmget</h3><p>使用方法：$redis-&gt;setex($key, $value_array);<br>用途：批量获取hash表的值，返回键值对，无键为false<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">$value_array = [</span><br><span class="line">      &apos;key1&apos;,</span><br><span class="line">      &apos;key4&apos;,</span><br><span class="line">      &apos;key5&apos;,</span><br><span class="line">];</span><br><span class="line">$result = $redis-&gt;hmget($key, $value_array);</span><br><span class="line">var_dump($result);</span><br><span class="line"></span><br><span class="line">===== output =====</span><br><span class="line">array(3) &#123;</span><br><span class="line">  [&quot;key1&quot;]=&gt;</span><br><span class="line">  string(6) &quot;value1&quot;</span><br><span class="line">  [&quot;key4&quot;]=&gt;</span><br><span class="line">  bool(false)   // 未设置键，返回false</span><br><span class="line">  [&quot;key5&quot;]=&gt;</span><br><span class="line">  bool(false)   // 未设置键，返回false</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><br></p>
-<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a href="http://redisdoc.com" target="_blank" rel="noopener">redis中文手册</a><br><a href="https://www.cnblogs.com/weafer/archive/2011/09/21/2184059.html" target="_blank" rel="noopener">PHP-redis中文文档</a><br><a href="https://www.cnblogs.com/weafer/archive/2011/09/21/2184059.html" target="_blank" rel="noopener">phpredis中文手册——《redis中文手册》 php版</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -429,9 +290,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/03/git管理密钥配置/" itemprop="url">git管理密钥配置</a></h2>
+          <h2 class="post-title" itemprop="name headline">git管理密钥配置</h2>
         
 
         <div class="post-meta">
@@ -481,9 +340,7 @@
       
 
       
-        
-          
-            <h3 id="git下载"><a href="#git下载" class="headerlink" title="git下载"></a>git下载</h3><p><a href="https://git-scm.com/download/win" target="_blank" rel="noopener">下载地址</a></p>
+        <h3 id="git下载"><a href="#git下载" class="headerlink" title="git下载"></a>git下载</h3><p><a href="https://git-scm.com/download/win" target="_blank" rel="noopener">下载地址</a></p>
 <h3 id="git配置"><a href="#git配置" class="headerlink" title="git配置"></a>git配置</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name "你的GitHub用户名"</span><br><span class="line">git config --global user.email "你的GitHub注册邮箱"</span><br></pre></td></tr></table></figure>
 <h3 id="生成密钥"><a href="#生成密钥" class="headerlink" title="生成密钥"></a>生成密钥</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C "你的GitHub注册邮箱"</span><br><span class="line"></span><br><span class="line">Enter file in which to save the key          // 密钥保存位置，回车默认</span><br><span class="line">Enter passphrase (empty for no passphrase):  // 输入密码，直接回车</span><br><span class="line">Enter same passphrase again:                 // 输入确认密码，直接回车</span><br></pre></td></tr></table></figure>
 <h3 id="github密钥管理"><a href="#github密钥管理" class="headerlink" title="github密钥管理"></a>github密钥管理</h3><p><a href="https://github.com/settings/keys" target="_blank" rel="noopener">github密钥管理直达链接</a><br>1）New SSH Key，复制本地 ~/.ssh（window下为 C:\User\用户.ssh）的 id_rsa.pub<br>2）Title为标题，任意填即可，将刚刚复制的id_rsa.pub内容粘贴进去<br>3）最后点击Add SSH key。</p>
@@ -491,8 +348,6 @@
 <p><br></p>
 <h3 id="为不同网站应用各自的-SSH-KEY"><a href="#为不同网站应用各自的-SSH-KEY" class="headerlink" title="为不同网站应用各自的 SSH KEY"></a>为不同网站应用各自的 SSH KEY</h3><p>编辑ssh配置 <code>vim ~/.ssh/config</code><br>追加以下内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">    HostName github.com</span><br><span class="line">    User git</span><br><span class="line">    IdentityFile ~/.ssh/id_rsa_a</span><br><span class="line"></span><br><span class="line">Host git.oschina.net</span><br><span class="line">    HostName git.oschina.net</span><br><span class="line">    User git</span><br><span class="line">    IdentityFile ~/.ssh/id_rsa_b</span><br></pre></td></tr></table></figure></p>
 
-          
-        
       
     </div>
     
@@ -509,12 +364,28 @@
       
 
       
+      
+      
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11/07/PHP-Redis-使用教程/" rel="prev" title="PHP Redis 使用教程">
+                PHP Redis 使用教程 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
 
       
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -524,10 +395,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -535,6 +407,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -555,8 +431,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="HBLong">
           <p class="site-author-name" itemprop="name">HBLong</p>
@@ -607,6 +492,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#git下载"><span class="nav-number">1.</span> <span class="nav-text">git下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git配置"><span class="nav-number">2.</span> <span class="nav-text">git配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生成密钥"><span class="nav-number">3.</span> <span class="nav-text">生成密钥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#github密钥管理"><span class="nav-number">4.</span> <span class="nav-text">github密钥管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#检验"><span class="nav-number">5.</span> <span class="nav-text">检验</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为不同网站应用各自的-SSH-KEY"><span class="nav-number">6.</span> <span class="nav-text">为不同网站应用各自的 SSH KEY</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -727,10 +628,10 @@
 
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 

@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="HBLong's blog">
+  <meta name="keywords" content="PHP Redis,">
 
 
 
@@ -94,17 +94,18 @@
 
 
 
-<meta name="description" content="HBLong&apos;s blog">
-<meta name="keywords" content="HBLong,blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="HBLong&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="PHP Redis使用教程日常使用Redis的过程中发现搜到的文档对于使用方法、返回值这些都不是很全，因此写个文档整理在一起方便查找。除了比较难找的，后面会分配时间将常用的也不断补全。  连接connect使用方法：$redis-&amp;gt;connect($host, $port)返回值：被移除key的数量参数：host服务地址；  port端口号 用途：切换redis库12$redis = new">
+<meta name="keywords" content="PHP Redis">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PHP Redis 使用教程">
+<meta property="og:url" content="http://yoursite.com/2018/11/07/PHP-Redis-使用教程/index.html">
 <meta property="og:site_name" content="HBLong&#39;s blog">
-<meta property="og:description" content="HBLong&apos;s blog">
+<meta property="og:description" content="PHP Redis使用教程日常使用Redis的过程中发现搜到的文档对于使用方法、返回值这些都不是很全，因此写个文档整理在一起方便查找。除了比较难找的，后面会分配时间将常用的也不断补全。  连接connect使用方法：$redis-&amp;gt;connect($host, $port)返回值：被移除key的数量参数：host服务地址；  port端口号 用途：切换redis库12$redis = new">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-11-07T13:45:38.121Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HBLong&#39;s blog">
-<meta name="twitter:description" content="HBLong&apos;s blog">
+<meta name="twitter:title" content="PHP Redis 使用教程">
+<meta name="twitter:description" content="PHP Redis使用教程日常使用Redis的过程中发现搜到的文档对于使用方法、返回值这些都不是很全，因此写个文档整理在一起方便查找。除了比较难找的，后面会分配时间将常用的也不断补全。  连接connect使用方法：$redis-&amp;gt;connect($host, $port)返回值：被移除key的数量参数：host服务地址；  port端口号 用途：切换redis库12$redis = new">
 
 
 
@@ -133,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2018/11/07/PHP-Redis-使用教程/">
 
 
 
 
 
-  <title>HBLong's blog</title>
+  <title>PHP Redis 使用教程 | HBLong's blog</title>
   
 
 
@@ -164,9 +165,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -259,9 +258,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -291,9 +290,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/07/PHP-Redis-使用教程/" itemprop="url">PHP Redis 使用教程</a></h2>
+          <h2 class="post-title" itemprop="name headline">PHP Redis 使用教程</h2>
         
 
         <div class="post-meta">
@@ -343,9 +340,7 @@
       
 
       
-        
-          
-            <h2 id="PHP-Redis使用教程"><a href="#PHP-Redis使用教程" class="headerlink" title="PHP Redis使用教程"></a>PHP Redis使用教程</h2><p>日常使用Redis的过程中发现搜到的文档对于使用方法、返回值这些都不是很全，因此写个文档整理在一起方便查找。除了比较难找的，后面会分配时间将常用的也不断补全。</p>
+        <h2 id="PHP-Redis使用教程"><a href="#PHP-Redis使用教程" class="headerlink" title="PHP Redis使用教程"></a>PHP Redis使用教程</h2><p>日常使用Redis的过程中发现搜到的文档对于使用方法、返回值这些都不是很全，因此写个文档整理在一起方便查找。除了比较难找的，后面会分配时间将常用的也不断补全。</p>
 <p><br></p>
 <h2 id="连接"><a href="#连接" class="headerlink" title="连接"></a>连接</h2><h3 id="connect"><a href="#connect" class="headerlink" title="connect"></a>connect</h3><p>使用方法：$redis-&gt;connect($host, $port)<br>返回值：被移除key的数量<br>参数：<strong>host</strong>服务地址；  <strong>port</strong>端口号</p>
 <p>用途：切换redis库<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$redis = <span class="keyword">new</span> Redis();</span><br><span class="line">$redis-&gt;connect(<span class="string">'127.0.0.1'</span>, <span class="number">6379</span>);</span><br></pre></td></tr></table></figure></p>
@@ -365,8 +360,6 @@
 <p><br></p>
 <h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a href="http://redisdoc.com" target="_blank" rel="noopener">redis中文手册</a><br><a href="https://www.cnblogs.com/weafer/archive/2011/09/21/2184059.html" target="_blank" rel="noopener">PHP-redis中文文档</a><br><a href="https://www.cnblogs.com/weafer/archive/2011/09/21/2184059.html" target="_blank" rel="noopener">phpredis中文手册——《redis中文手册》 php版</a></p>
 
-          
-        
       
     </div>
     
@@ -381,140 +374,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/03/git管理密钥配置/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="HBLong">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="HBLong's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/03/git管理密钥配置/" itemprop="url">git管理密钥配置</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-03T18:06:26+08:00">
-                2018-11-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/PHP-Redis/" rel="tag"># PHP Redis</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="git下载"><a href="#git下载" class="headerlink" title="git下载"></a>git下载</h3><p><a href="https://git-scm.com/download/win" target="_blank" rel="noopener">下载地址</a></p>
-<h3 id="git配置"><a href="#git配置" class="headerlink" title="git配置"></a>git配置</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name "你的GitHub用户名"</span><br><span class="line">git config --global user.email "你的GitHub注册邮箱"</span><br></pre></td></tr></table></figure>
-<h3 id="生成密钥"><a href="#生成密钥" class="headerlink" title="生成密钥"></a>生成密钥</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C "你的GitHub注册邮箱"</span><br><span class="line"></span><br><span class="line">Enter file in which to save the key          // 密钥保存位置，回车默认</span><br><span class="line">Enter passphrase (empty for no passphrase):  // 输入密码，直接回车</span><br><span class="line">Enter same passphrase again:                 // 输入确认密码，直接回车</span><br></pre></td></tr></table></figure>
-<h3 id="github密钥管理"><a href="#github密钥管理" class="headerlink" title="github密钥管理"></a>github密钥管理</h3><p><a href="https://github.com/settings/keys" target="_blank" rel="noopener">github密钥管理直达链接</a><br>1）New SSH Key，复制本地 ~/.ssh（window下为 C:\User\用户.ssh）的 id_rsa.pub<br>2）Title为标题，任意填即可，将刚刚复制的id_rsa.pub内容粘贴进去<br>3）最后点击Add SSH key。</p>
-<h3 id="检验"><a href="#检验" class="headerlink" title="检验"></a>检验</h3><p>在Git Bash中检测GitHub公钥设置是否成功，输入<br><code>ssh -T git@github.com</code></p>
-<p><br></p>
-<h3 id="为不同网站应用各自的-SSH-KEY"><a href="#为不同网站应用各自的-SSH-KEY" class="headerlink" title="为不同网站应用各自的 SSH KEY"></a>为不同网站应用各自的 SSH KEY</h3><p>编辑ssh配置 <code>vim ~/.ssh/config</code><br>追加以下内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">    HostName github.com</span><br><span class="line">    User git</span><br><span class="line">    IdentityFile ~/.ssh/id_rsa_a</span><br><span class="line"></span><br><span class="line">Host git.oschina.net</span><br><span class="line">    HostName git.oschina.net</span><br><span class="line">    User git</span><br><span class="line">    IdentityFile ~/.ssh/id_rsa_b</span><br></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/03/git管理密钥配置/" rel="next" title="git管理密钥配置">
+                <i class="fa fa-chevron-left"></i> git管理密钥配置
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
       
     </footer>
   </div>
@@ -524,10 +413,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -535,6 +425,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -555,8 +449,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="HBLong">
           <p class="site-author-name" itemprop="name">HBLong</p>
@@ -607,6 +510,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP-Redis使用教程"><span class="nav-number">1.</span> <span class="nav-text">PHP Redis使用教程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#连接"><span class="nav-number">2.</span> <span class="nav-text">连接</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#connect"><span class="nav-number">2.1.</span> <span class="nav-text">connect</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#select"><span class="nav-number">2.2.</span> <span class="nav-text">select</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#键（KEY）"><span class="nav-number">3.</span> <span class="nav-text">键（KEY）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#del"><span class="nav-number">3.1.</span> <span class="nav-text">del</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#set"><span class="nav-number">3.2.</span> <span class="nav-text">set</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#get"><span class="nav-number">3.3.</span> <span class="nav-text">get</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#exists"><span class="nav-number">3.4.</span> <span class="nav-text">exists</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#setex"><span class="nav-number">3.5.</span> <span class="nav-text">setex</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#setnx"><span class="nav-number">3.6.</span> <span class="nav-text">setnx</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hash（哈希表）"><span class="nav-number">4.</span> <span class="nav-text">Hash（哈希表）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hmset"><span class="nav-number">4.1.</span> <span class="nav-text">hmset</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hmget"><span class="nav-number">4.2.</span> <span class="nav-text">hmget</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文档"><span class="nav-number">5.</span> <span class="nav-text">参考文档</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -727,10 +646,10 @@
 
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 

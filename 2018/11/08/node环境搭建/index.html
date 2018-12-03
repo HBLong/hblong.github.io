@@ -94,18 +94,18 @@
 
 
 
-<meta name="description" content="node环境搭建下载安装通过源码编译node下载地址1234$ wget https://nodejs.org/dist/v10.13.0/node-v10.13.0.tar.gz$ tar -zxvf node-v10.13.0.tar.gz$ cd node-v10.13.0$ make &amp;amp;&amp;amp; make install 通过安装包安装根据系统环境以及选择安装包node下载地址">
+<meta name="description" content="这篇博文介绍了各种搭建node方法以及加速方案。其中极力推荐使用n进行版本管理，特别方便。而且在国内推荐使用cnpm来加速依赖安装，特别爽。">
 <meta name="keywords" content="HBLong,blog">
 <meta property="og:type" content="article">
 <meta property="og:title" content="node环境搭建">
 <meta property="og:url" content="http://yoursite.com/2018/11/08/node环境搭建/index.html">
 <meta property="og:site_name" content="HBLong&#39;s blog">
-<meta property="og:description" content="node环境搭建下载安装通过源码编译node下载地址1234$ wget https://nodejs.org/dist/v10.13.0/node-v10.13.0.tar.gz$ tar -zxvf node-v10.13.0.tar.gz$ cd node-v10.13.0$ make &amp;amp;&amp;amp; make install 通过安装包安装根据系统环境以及选择安装包node下载地址">
+<meta property="og:description" content="这篇博文介绍了各种搭建node方法以及加速方案。其中极力推荐使用n进行版本管理，特别方便。而且在国内推荐使用cnpm来加速依赖安装，特别爽。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-08T02:02:03.497Z">
+<meta property="og:updated_time" content="2018-11-10T08:26:35.375Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="node环境搭建">
-<meta name="twitter:description" content="node环境搭建下载安装通过源码编译node下载地址1234$ wget https://nodejs.org/dist/v10.13.0/node-v10.13.0.tar.gz$ tar -zxvf node-v10.13.0.tar.gz$ cd node-v10.13.0$ make &amp;amp;&amp;amp; make install 通过安装包安装根据系统环境以及选择安装包node下载地址">
+<meta name="twitter:description" content="这篇博文介绍了各种搭建node方法以及加速方案。其中极力推荐使用n进行版本管理，特别方便。而且在国内推荐使用cnpm来加速依赖安装，特别爽。">
 
 
 
@@ -377,7 +377,9 @@
       
 
       
-        <h2 id="node环境搭建"><a href="#node环境搭建" class="headerlink" title="node环境搭建"></a>node环境搭建</h2><h3 id="下载安装"><a href="#下载安装" class="headerlink" title="下载安装"></a>下载安装</h3><h4 id="通过源码编译"><a href="#通过源码编译" class="headerlink" title="通过源码编译"></a>通过源码编译</h4><p><a href="https://nodejs.org/zh-cn/download/" target="_blank" rel="noopener">node下载地址</a><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> wget https://nodejs.org/dist/v10.13.0/node-v10.13.0.tar.gz</span><br><span class="line"><span class="meta">$</span> tar -zxvf node-v10.13.0.tar.gz</span><br><span class="line"><span class="meta">$</span> cd node-v10.13.0</span><br><span class="line"><span class="meta">$</span> make &amp;&amp; make install</span><br></pre></td></tr></table></figure></p>
+        <p>这篇博文介绍了各种搭建node方法以及加速方案。其中极力推荐使用n进行版本管理，特别方便。而且在国内推荐使用cnpm来加速依赖安装，特别爽。</p>
+<a id="more"></a>
+<h2 id="node环境搭建"><a href="#node环境搭建" class="headerlink" title="node环境搭建"></a>node环境搭建</h2><h3 id="下载安装"><a href="#下载安装" class="headerlink" title="下载安装"></a>下载安装</h3><h4 id="通过源码编译"><a href="#通过源码编译" class="headerlink" title="通过源码编译"></a>通过源码编译</h4><p><a href="https://nodejs.org/zh-cn/download/" target="_blank" rel="noopener">node下载地址</a><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> wget https://nodejs.org/dist/v10.13.0/node-v10.13.0.tar.gz</span><br><span class="line"><span class="meta">$</span> tar -zxvf node-v10.13.0.tar.gz</span><br><span class="line"><span class="meta">$</span> cd node-v10.13.0</span><br><span class="line"><span class="meta">$</span> make &amp;&amp; make install</span><br></pre></td></tr></table></figure></p>
 <h4 id="通过安装包安装"><a href="#通过安装包安装" class="headerlink" title="通过安装包安装"></a>通过安装包安装</h4><p>根据系统环境以及选择安装包<a href="https://nodejs.org/zh-cn/download/" target="_blank" rel="noopener">node下载地址</a></p>
 <h4 id="通过yum（CentOS）"><a href="#通过yum（CentOS）" class="headerlink" title="通过yum（CentOS）"></a>通过yum（CentOS）</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> yum install -y nodejs</span><br></pre></td></tr></table></figure>
 <p><br></p>
@@ -503,15 +505,24 @@
           
 
           
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
 
           
             
             
             <div class="site-state-item site-state-tags">
-              
-                <span class="site-state-item-count">1</span>
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">tags</span>
-              
+              </a>
             </div>
           
 

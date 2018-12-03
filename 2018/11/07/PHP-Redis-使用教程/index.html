@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="PHP Redis,">
+  <meta name="keywords" content="PHP Redis,Redis,">
 
 
 
@@ -94,18 +94,18 @@
 
 
 
-<meta name="description" content="PHP Redis使用教程日常使用Redis的过程中发现搜到的文档对于使用方法、返回值这些都不是很全，因此写个文档整理在一起方便查找。除了比较难找的，后面会分配时间将常用的也不断补全。  连接connect使用方法：$redis-&amp;gt;connect($host, $port)返回值：被移除key的数量参数：host服务地址；  port端口号 用途：切换redis库12$redis = new">
-<meta name="keywords" content="PHP Redis">
+<meta name="description" content="日常使用Redis的过程中发现搜到的文档对于使用方法、返回值这些都不是很全，因此写个文档整理在一起方便查找。除了比较难找的，后面会分配时间将常用的也不断补全。">
+<meta name="keywords" content="PHP Redis,Redis">
 <meta property="og:type" content="article">
 <meta property="og:title" content="PHP Redis 使用教程">
 <meta property="og:url" content="http://yoursite.com/2018/11/07/PHP-Redis-使用教程/index.html">
 <meta property="og:site_name" content="HBLong&#39;s blog">
-<meta property="og:description" content="PHP Redis使用教程日常使用Redis的过程中发现搜到的文档对于使用方法、返回值这些都不是很全，因此写个文档整理在一起方便查找。除了比较难找的，后面会分配时间将常用的也不断补全。  连接connect使用方法：$redis-&amp;gt;connect($host, $port)返回值：被移除key的数量参数：host服务地址；  port端口号 用途：切换redis库12$redis = new">
+<meta property="og:description" content="日常使用Redis的过程中发现搜到的文档对于使用方法、返回值这些都不是很全，因此写个文档整理在一起方便查找。除了比较难找的，后面会分配时间将常用的也不断补全。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-07T13:45:38.121Z">
+<meta property="og:updated_time" content="2018-11-10T08:45:35.172Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PHP Redis 使用教程">
-<meta name="twitter:description" content="PHP Redis使用教程日常使用Redis的过程中发现搜到的文档对于使用方法、返回值这些都不是很全，因此写个文档整理在一起方便查找。除了比较难找的，后面会分配时间将常用的也不断补全。  连接connect使用方法：$redis-&amp;gt;connect($host, $port)返回值：被移除key的数量参数：host服务地址；  port端口号 用途：切换redis库12$redis = new">
+<meta name="twitter:description" content="日常使用Redis的过程中发现搜到的文档对于使用方法、返回值这些都不是很全，因此写个文档整理在一起方便查找。除了比较难找的，后面会分配时间将常用的也不断补全。">
 
 
 
@@ -345,6 +345,28 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/PHP/" itemprop="url" rel="index">
+                    <span itemprop="name">PHP</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -377,8 +399,8 @@
       
 
       
-        <h2 id="PHP-Redis使用教程"><a href="#PHP-Redis使用教程" class="headerlink" title="PHP Redis使用教程"></a>PHP Redis使用教程</h2><p>日常使用Redis的过程中发现搜到的文档对于使用方法、返回值这些都不是很全，因此写个文档整理在一起方便查找。除了比较难找的，后面会分配时间将常用的也不断补全。</p>
-<p><br></p>
+        <p>日常使用Redis的过程中发现搜到的文档对于使用方法、返回值这些都不是很全，因此写个文档整理在一起方便查找。除了比较难找的，后面会分配时间将常用的也不断补全。</p>
+<a id="more"></a>
 <h2 id="连接"><a href="#连接" class="headerlink" title="连接"></a>连接</h2><h3 id="connect"><a href="#connect" class="headerlink" title="connect"></a>connect</h3><p>使用方法：$redis-&gt;connect($host, $port)<br>返回值：被移除key的数量<br>参数：<strong>host</strong>服务地址；  <strong>port</strong>端口号</p>
 <p>用途：切换redis库<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$redis = <span class="keyword">new</span> Redis();</span><br><span class="line">$redis-&gt;connect(<span class="string">'127.0.0.1'</span>, <span class="number">6379</span>);</span><br></pre></td></tr></table></figure></p>
 <h3 id="select"><a href="#select" class="headerlink" title="select"></a>select</h3><p>使用方法：$redis-&gt;select($db_number)<br>返回值：被移除key的数量<br>参数：库对应的数值<br>用途：切换redis库<br><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$redis = <span class="keyword">new</span> Redis();</span><br><span class="line">$redis-&gt;connect(<span class="string">'127.0.0.1'</span>, <span class="number">6379</span>);</span><br><span class="line">$redis-&gt;select(<span class="number">1</span>); <span class="comment">// 切换到1库</span></span><br></pre></td></tr></table></figure></p>
@@ -414,6 +436,8 @@
         <div class="post-tags">
           
             <a href="/tags/PHP-Redis/" rel="tag"># PHP Redis</a>
+          
+            <a href="/tags/Redis/" rel="tag"># Redis</a>
           
         </div>
       
@@ -522,15 +546,24 @@
           
 
           
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
 
           
             
             
             <div class="site-state-item site-state-tags">
-              
-                <span class="site-state-item-count">1</span>
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">tags</span>
-              
+              </a>
             </div>
           
 
@@ -563,7 +596,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP-Redis使用教程"><span class="nav-number">1.</span> <span class="nav-text">PHP Redis使用教程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#连接"><span class="nav-number">2.</span> <span class="nav-text">连接</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#connect"><span class="nav-number">2.1.</span> <span class="nav-text">connect</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#select"><span class="nav-number">2.2.</span> <span class="nav-text">select</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#键（KEY）"><span class="nav-number">3.</span> <span class="nav-text">键（KEY）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#del"><span class="nav-number">3.1.</span> <span class="nav-text">del</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#set"><span class="nav-number">3.2.</span> <span class="nav-text">set</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#get"><span class="nav-number">3.3.</span> <span class="nav-text">get</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#exists"><span class="nav-number">3.4.</span> <span class="nav-text">exists</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#setex"><span class="nav-number">3.5.</span> <span class="nav-text">setex</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#setnx"><span class="nav-number">3.6.</span> <span class="nav-text">setnx</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hash（哈希表）"><span class="nav-number">4.</span> <span class="nav-text">Hash（哈希表）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hmset"><span class="nav-number">4.1.</span> <span class="nav-text">hmset</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hmget"><span class="nav-number">4.2.</span> <span class="nav-text">hmget</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文档"><span class="nav-number">5.</span> <span class="nav-text">参考文档</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#连接"><span class="nav-number">1.</span> <span class="nav-text">连接</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#connect"><span class="nav-number">1.1.</span> <span class="nav-text">connect</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#select"><span class="nav-number">1.2.</span> <span class="nav-text">select</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#键（KEY）"><span class="nav-number">2.</span> <span class="nav-text">键（KEY）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#del"><span class="nav-number">2.1.</span> <span class="nav-text">del</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#set"><span class="nav-number">2.2.</span> <span class="nav-text">set</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#get"><span class="nav-number">2.3.</span> <span class="nav-text">get</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#exists"><span class="nav-number">2.4.</span> <span class="nav-text">exists</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#setex"><span class="nav-number">2.5.</span> <span class="nav-text">setex</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#setnx"><span class="nav-number">2.6.</span> <span class="nav-text">setnx</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hash（哈希表）"><span class="nav-number">3.</span> <span class="nav-text">Hash（哈希表）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#hmset"><span class="nav-number">3.1.</span> <span class="nav-text">hmset</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hmget"><span class="nav-number">3.2.</span> <span class="nav-text">hmget</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文档"><span class="nav-number">4.</span> <span class="nav-text">参考文档</span></a></li></ol></div>
             
 
           </div>

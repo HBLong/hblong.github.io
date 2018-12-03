@@ -376,150 +376,17 @@
 
       
         
-          
-            <h3 id="nginx-全局变量"><a href="#nginx-全局变量" class="headerlink" title="nginx 全局变量"></a>nginx 全局变量</h3><p>请求http报文如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Request URL: http://www.test1.com/?test_var=123&amp;test_var2=456</span><br><span class="line">Request Method: POST</span><br><span class="line">Status Code: 200 OK</span><br><span class="line">Remote Address: 127.0.0.1:80</span><br><span class="line">Referrer Policy: no-referrer-when-downgrade</span><br><span class="line">Accept: */*</span><br><span class="line">Content-Type: application/x-www-form-urlencoded; charset=UTF-8</span><br><span class="line">Origin: http://www.test.com</span><br><span class="line">Referer: http://www.test.com/test.html</span><br><span class="line">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36</span><br><span class="line"></span><br><span class="line">post_test_var=789&amp;POst_test_var1=101112</span><br></pre></td></tr></table></figure></p>
-<p>nginx全局变量列举：</p>
-<table>
-<thead>
-<tr>
-<th>变量</th>
-<th>值</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>$remote_addr</td>
-<td>127.0.0.1</td>
-<td>客户端IP地址；</td>
-</tr>
-<tr>
-<td>$http_origin</td>
-<td><a href="http://www.test.com" target="_blank" rel="noopener">http://www.test.com</a></td>
-<td>HOST；</td>
-</tr>
-<tr>
-<td>$http_referer</td>
-<td><a href="http://www.test.com/test.html" target="_blank" rel="noopener">http://www.test.com/test.html</a></td>
-<td>origin源；</td>
-</tr>
-<tr>
-<td>$http_host</td>
-<td><a href="http://www.test1.com" target="_blank" rel="noopener">www.test1.com</a></td>
-<td>Referer；</td>
-</tr>
-<tr>
-<td>$args</td>
-<td>test_var=123&amp;test_var2=456</td>
-<td>#这个变量等于请求行中的参数，同$query_string</td>
-</tr>
-<tr>
-<td>$content_length</td>
-<td>39</td>
-<td>请求头中的Content-length字段。</td>
-</tr>
-<tr>
-<td>$content_type</td>
-<td>application/x-www-form-urlencoded; charset=UTF-8</td>
-<td>请求头中的Content-Type字段。</td>
-</tr>
-<tr>
-<td>$document_root</td>
-<td>D:/phpStudy/WWW</td>
-<td>当前请求在root指令中指定的值。</td>
-</tr>
-<tr>
-<td>$host</td>
-<td><a href="http://www.test1.com" target="_blank" rel="noopener">www.test1.com</a></td>
-<td>请求主机头字段，否则为服务器名称。</td>
-</tr>
-<tr>
-<td>$http_user_agent</td>
-<td>http_user_agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.</td>
-<td>客户端agent信息</td>
-</tr>
-<tr>
-<td>$http_cookie</td>
-<td></td>
-<td>客户端cookie信息</td>
-</tr>
-<tr>
-<td>$limit_rate</td>
-<td>0</td>
-<td>这个变量可以限制连接速率。</td>
-</tr>
-<tr>
-<td>$request_method</td>
-<td>POST</td>
-<td>客户端请求的动作，通常为GET或POST。</td>
-</tr>
-<tr>
-<td>$remote_addr</td>
-<td>127.0.0.1</td>
-<td>客户端的IP地址。</td>
-</tr>
-<tr>
-<td>$remote_port</td>
-<td>65002</td>
-<td>客户端的端口。</td>
-</tr>
-<tr>
-<td>$remote_user</td>
-<td></td>
-<td>已经经过Auth Basic Module验证的用户名。</td>
-</tr>
-<tr>
-<td>$request_filename</td>
-<td>D:/phpStudy/WWW/</td>
-<td>当前请求的文件路径，由root或alias指令与URI请求生成。</td>
-</tr>
-<tr>
-<td>$scheme</td>
-<td>http</td>
-<td>HTTP方法（如http，https）。</td>
-</tr>
-<tr>
-<td>$server_protocol</td>
-<td>HTTP/1.1</td>
-<td>请求使用的协议，通常是HTTP/1.0或HTTP/1.1。</td>
-</tr>
-<tr>
-<td>$server_addr</td>
-<td>127.0.0.1</td>
-<td>服务器地址，在完成一次系统调用后可以确定这个值。</td>
-</tr>
-<tr>
-<td>$server_name</td>
-<td><a href="http://www.test1.com" target="_blank" rel="noopener">www.test1.com</a></td>
-<td>服务器名称。</td>
-</tr>
-<tr>
-<td>$server_port</td>
-<td>80</td>
-<td>请求到达服务器的端口号。</td>
-</tr>
-<tr>
-<td>$request_uri</td>
-<td>/?test_var=123&amp;test_var2=456</td>
-<td>包含请求参数的原始URI，不包含主机名，如 ”/foo/bar.php?arg=baz”。</td>
-</tr>
-<tr>
-<td>$uri</td>
-<td>/</td>
-<td>不带请求参数的当前URI，$uri不包含主机名，如”/foo/bar.html”。</td>
-</tr>
-<tr>
-<td>$document_uri</td>
-<td>/</td>
-<td>与$uri相同。</td>
-</tr>
-</tbody>
-</table>
-
-          
+          <p>平时使用nginx的过程发现有很多零碎的东西在网上很难查看，因此总结归纳一下，主要列举了nginx常用的变量和围绕一些知识点展示用例。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/12/03/nginx配置总结/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
-    </div>
+    </p></div>
     
     
     

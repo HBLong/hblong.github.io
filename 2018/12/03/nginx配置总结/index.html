@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="HBLong's blog">
+  <meta name="keywords" content="nginx,">
 
 
 
@@ -94,18 +94,18 @@
 
 
 
-<meta name="description" content="这篇博文介绍了如何配置git密钥，并在github使用git密钥来进行远程连接鉴权。">
-<meta name="keywords" content="HBLong,blog">
+<meta name="description" content="nginx 全局变量请求http报文如下123456789101112Request URL: http://www.test1.com/?test_var=123&amp;amp;test_var2=456Request Method: POSTStatus Code: 200 OKRemote Address: 127.0.0.1:80Referrer Policy: no-referrer-when">
+<meta name="keywords" content="nginx">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git管理密钥配置">
-<meta property="og:url" content="http://yoursite.com/2018/11/03/git管理密钥配置/index.html">
+<meta property="og:title" content="nginx配置总结">
+<meta property="og:url" content="http://yoursite.com/2018/12/03/nginx配置总结/index.html">
 <meta property="og:site_name" content="HBLong&#39;s blog">
-<meta property="og:description" content="这篇博文介绍了如何配置git密钥，并在github使用git密钥来进行远程连接鉴权。">
+<meta property="og:description" content="nginx 全局变量请求http报文如下123456789101112Request URL: http://www.test1.com/?test_var=123&amp;amp;test_var2=456Request Method: POSTStatus Code: 200 OKRemote Address: 127.0.0.1:80Referrer Policy: no-referrer-when">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-10T08:28:44.087Z">
+<meta property="og:updated_time" content="2018-12-03T11:58:10.765Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git管理密钥配置">
-<meta name="twitter:description" content="这篇博文介绍了如何配置git密钥，并在github使用git密钥来进行远程连接鉴权。">
+<meta name="twitter:title" content="nginx配置总结">
+<meta name="twitter:description" content="nginx 全局变量请求http报文如下123456789101112Request URL: http://www.test1.com/?test_var=123&amp;amp;test_var2=456Request Method: POSTStatus Code: 200 OKRemote Address: 127.0.0.1:80Referrer Policy: no-referrer-when">
 
 
 
@@ -134,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/11/03/git管理密钥配置/">
+  <link rel="canonical" href="http://yoursite.com/2018/12/03/nginx配置总结/">
 
 
 
 
 
-  <title>git管理密钥配置 | HBLong's blog</title>
+  <title>nginx配置总结 | HBLong's blog</title>
   
 
 
@@ -305,7 +305,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/03/git管理密钥配置/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/03/nginx配置总结/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="HBLong">
@@ -322,7 +322,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">git管理密钥配置</h2>
+          <h2 class="post-title" itemprop="name headline">nginx配置总结</h2>
         
 
         <div class="post-meta">
@@ -334,8 +334,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-03T18:06:26+08:00">
-                2018-11-03
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-03T19:30:26+08:00">
+                2018-12-03
               </time>
             
 
@@ -377,15 +377,144 @@
       
 
       
-        <p>这篇博文介绍了如何配置git密钥，并在github使用git密钥来进行远程连接鉴权。</p>
-<a id="more"></a>
-<h3 id="git下载"><a href="#git下载" class="headerlink" title="git下载"></a>git下载</h3><p><a href="https://git-scm.com/download/win" target="_blank" rel="noopener">下载地址</a></p>
-<h3 id="git配置"><a href="#git配置" class="headerlink" title="git配置"></a>git配置</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name "你的GitHub用户名"</span><br><span class="line">git config --global user.email "你的GitHub注册邮箱"</span><br></pre></td></tr></table></figure>
-<h3 id="生成密钥"><a href="#生成密钥" class="headerlink" title="生成密钥"></a>生成密钥</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C "你的GitHub注册邮箱"</span><br><span class="line"></span><br><span class="line">Enter file in which to save the key          // 密钥保存位置，回车默认</span><br><span class="line">Enter passphrase (empty for no passphrase):  // 输入密码，直接回车</span><br><span class="line">Enter same passphrase again:                 // 输入确认密码，直接回车</span><br></pre></td></tr></table></figure>
-<h3 id="github密钥管理"><a href="#github密钥管理" class="headerlink" title="github密钥管理"></a>github密钥管理</h3><p><a href="https://github.com/settings/keys" target="_blank" rel="noopener">github密钥管理直达链接</a><br>1）New SSH Key，复制本地 ~/.ssh（window下为 C:\User\用户.ssh）的 id_rsa.pub<br>2）Title为标题，任意填即可，将刚刚复制的id_rsa.pub内容粘贴进去<br>3）最后点击Add SSH key。</p>
-<h3 id="检验"><a href="#检验" class="headerlink" title="检验"></a>检验</h3><p>在Git Bash中检测GitHub公钥设置是否成功，输入<br><code>ssh -T git@github.com</code></p>
-<p><br></p>
-<h3 id="为不同网站应用各自的-SSH-KEY"><a href="#为不同网站应用各自的-SSH-KEY" class="headerlink" title="为不同网站应用各自的 SSH KEY"></a>为不同网站应用各自的 SSH KEY</h3><p>编辑ssh配置 <code>vim ~/.ssh/config</code><br>追加以下内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Host github.com</span><br><span class="line">    HostName github.com</span><br><span class="line">    User git</span><br><span class="line">    IdentityFile ~/.ssh/id_rsa_a</span><br><span class="line"></span><br><span class="line">Host git.oschina.net</span><br><span class="line">    HostName git.oschina.net</span><br><span class="line">    User git</span><br><span class="line">    IdentityFile ~/.ssh/id_rsa_b</span><br></pre></td></tr></table></figure></p>
+        <h3 id="nginx-全局变量"><a href="#nginx-全局变量" class="headerlink" title="nginx 全局变量"></a>nginx 全局变量</h3><p>请求http报文如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Request URL: http://www.test1.com/?test_var=123&amp;test_var2=456</span><br><span class="line">Request Method: POST</span><br><span class="line">Status Code: 200 OK</span><br><span class="line">Remote Address: 127.0.0.1:80</span><br><span class="line">Referrer Policy: no-referrer-when-downgrade</span><br><span class="line">Accept: */*</span><br><span class="line">Content-Type: application/x-www-form-urlencoded; charset=UTF-8</span><br><span class="line">Origin: http://www.test.com</span><br><span class="line">Referer: http://www.test.com/test.html</span><br><span class="line">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36</span><br><span class="line"></span><br><span class="line">post_test_var=789&amp;POst_test_var1=101112</span><br></pre></td></tr></table></figure></p>
+<p>nginx全局变量列举：</p>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$remote_addr</td>
+<td>127.0.0.1</td>
+<td>客户端IP地址；</td>
+</tr>
+<tr>
+<td>$http_origin</td>
+<td><a href="http://www.test.com" target="_blank" rel="noopener">http://www.test.com</a></td>
+<td>HOST；</td>
+</tr>
+<tr>
+<td>$http_referer</td>
+<td><a href="http://www.test.com/test.html" target="_blank" rel="noopener">http://www.test.com/test.html</a></td>
+<td>origin源；</td>
+</tr>
+<tr>
+<td>$http_host</td>
+<td><a href="http://www.test1.com" target="_blank" rel="noopener">www.test1.com</a></td>
+<td>Referer；</td>
+</tr>
+<tr>
+<td>$args</td>
+<td>test_var=123&amp;test_var2=456</td>
+<td>#这个变量等于请求行中的参数，同$query_string</td>
+</tr>
+<tr>
+<td>$content_length</td>
+<td>39</td>
+<td>请求头中的Content-length字段。</td>
+</tr>
+<tr>
+<td>$content_type</td>
+<td>application/x-www-form-urlencoded; charset=UTF-8</td>
+<td>请求头中的Content-Type字段。</td>
+</tr>
+<tr>
+<td>$document_root</td>
+<td>D:/phpStudy/WWW</td>
+<td>当前请求在root指令中指定的值。</td>
+</tr>
+<tr>
+<td>$host</td>
+<td><a href="http://www.test1.com" target="_blank" rel="noopener">www.test1.com</a></td>
+<td>请求主机头字段，否则为服务器名称。</td>
+</tr>
+<tr>
+<td>$http_user_agent</td>
+<td>http_user_agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.</td>
+<td>客户端agent信息</td>
+</tr>
+<tr>
+<td>$http_cookie</td>
+<td></td>
+<td>客户端cookie信息</td>
+</tr>
+<tr>
+<td>$limit_rate</td>
+<td>0</td>
+<td>这个变量可以限制连接速率。</td>
+</tr>
+<tr>
+<td>$request_method</td>
+<td>POST</td>
+<td>客户端请求的动作，通常为GET或POST。</td>
+</tr>
+<tr>
+<td>$remote_addr</td>
+<td>127.0.0.1</td>
+<td>客户端的IP地址。</td>
+</tr>
+<tr>
+<td>$remote_port</td>
+<td>65002</td>
+<td>客户端的端口。</td>
+</tr>
+<tr>
+<td>$remote_user</td>
+<td></td>
+<td>已经经过Auth Basic Module验证的用户名。</td>
+</tr>
+<tr>
+<td>$request_filename</td>
+<td>D:/phpStudy/WWW/</td>
+<td>当前请求的文件路径，由root或alias指令与URI请求生成。</td>
+</tr>
+<tr>
+<td>$scheme</td>
+<td>http</td>
+<td>HTTP方法（如http，https）。</td>
+</tr>
+<tr>
+<td>$server_protocol</td>
+<td>HTTP/1.1</td>
+<td>请求使用的协议，通常是HTTP/1.0或HTTP/1.1。</td>
+</tr>
+<tr>
+<td>$server_addr</td>
+<td>127.0.0.1</td>
+<td>服务器地址，在完成一次系统调用后可以确定这个值。</td>
+</tr>
+<tr>
+<td>$server_name</td>
+<td><a href="http://www.test1.com" target="_blank" rel="noopener">www.test1.com</a></td>
+<td>服务器名称。</td>
+</tr>
+<tr>
+<td>$server_port</td>
+<td>80</td>
+<td>请求到达服务器的端口号。</td>
+</tr>
+<tr>
+<td>$request_uri</td>
+<td>/?test_var=123&amp;test_var2=456</td>
+<td>包含请求参数的原始URI，不包含主机名，如 ”/foo/bar.php?arg=baz”。</td>
+</tr>
+<tr>
+<td>$uri</td>
+<td>/</td>
+<td>不带请求参数的当前URI，$uri不包含主机名，如”/foo/bar.html”。</td>
+</tr>
+<tr>
+<td>$document_uri</td>
+<td>/</td>
+<td>与$uri相同。</td>
+</tr>
+</tbody>
+</table>
 
       
     </div>
@@ -401,6 +530,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/nginx/" rel="tag"># nginx</a>
+          
+        </div>
+      
 
       
       
@@ -410,15 +545,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/11/08/hexo博客搭建教程/" rel="next" title="hexo博客搭建教程">
+                <i class="fa fa-chevron-left"></i> hexo博客搭建教程
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/11/07/PHP-Redis-使用教程/" rel="prev" title="PHP Redis 使用教程">
-                PHP Redis 使用教程 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -552,7 +687,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#git下载"><span class="nav-number">1.</span> <span class="nav-text">git下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git配置"><span class="nav-number">2.</span> <span class="nav-text">git配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生成密钥"><span class="nav-number">3.</span> <span class="nav-text">生成密钥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#github密钥管理"><span class="nav-number">4.</span> <span class="nav-text">github密钥管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#检验"><span class="nav-number">5.</span> <span class="nav-text">检验</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为不同网站应用各自的-SSH-KEY"><span class="nav-number">6.</span> <span class="nav-text">为不同网站应用各自的 SSH KEY</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#nginx-全局变量"><span class="nav-number">1.</span> <span class="nav-text">nginx 全局变量</span></a></li></ol></div>
             
 
           </div>
